@@ -15,8 +15,7 @@
     "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,html,json,gql,graphql}'",
     "fix": "npm run --silent format; npm run --silent lint:fix",
-    "preinstall": "npx typesync || :",
-    "prepare": "npx simple-git-hooks || :"
+    "preinstall": "npx typesync || :"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -40,7 +39,6 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^28.1.3",
-    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "simple-git-hooks": "^2.8.0",
     "stylelint": "^14.10.0",
@@ -62,8 +60,5 @@
     "src/**/*.{html,json,gql,graphql}": [
       "prettier --write --loglevel=error"
     ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": ". ./lint-staged-each.sh"
   }
 }
