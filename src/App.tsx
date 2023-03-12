@@ -1,35 +1,26 @@
-import { FC, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
-
-const title = import.meta.env.VITE_APP_TITLE;
+import { FC } from 'react';
+import { Box, Flex } from '@chakra-ui/react';
+import Book from 'components/Book';
+import Map from 'components/Map';
+import Header from './components/Header';
+import LibraryList from './components/LibraryList';
 
 const App: FC = () => {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>{title}</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Box>
+      <Header />
+      <Flex wrap="wrap" justify="space-between" my={5}>
+        <Box width={{ base: '100%', sm: '20%', md: '20%' }}>
+          <Book />
+        </Box>
+        <Box width={{ base: '100%', sm: '25%', md: '25%' }}>
+          <LibraryList />
+        </Box>
+        <Box width={{ base: '100%', sm: '50%', md: '50%' }}>
+          <Map />
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 
