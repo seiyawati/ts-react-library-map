@@ -3,7 +3,6 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
 import { SetBookContext } from '../contexts/BookContext';
 import { searchBook } from '../utils/api';
-import { Book } from '../contexts/BookContext';
 
 const SearchBar: FC = () => {
   const setBook = useContext(SetBookContext);

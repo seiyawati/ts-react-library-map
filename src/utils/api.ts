@@ -16,6 +16,7 @@ export const searchBook = async (query: string) => {
       title: book.volumeInfo.title,
       image: book.volumeInfo.imageLinks?.thumbnail,
       description: book.volumeInfo.description,
+      isbn: book.volumeInfo.industryIdentifiers[0].identifier
     };
   } catch (error) {
     console.error(error);
