@@ -7,9 +7,11 @@ const LibraryList: FC = () => {
 
   return (
     <Box maxH="100vh" overflowY="scroll">
-      <Heading as="h2" size="md" mb="2">
-        蔵書がある図書館
-      </Heading>
+      <Box textAlign="center">
+        <Heading as="h2" size="md" mb="2">
+          蔵書がある図書館
+        </Heading>
+      </Box>
       {items.map((item, index) => (
         <Box key={index} p="4" bg="gray.100" mb="2">
           <Library />
