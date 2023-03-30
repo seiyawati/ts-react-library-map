@@ -17,6 +17,7 @@ interface Book {
   title: string;
   description: string;
   image: string;
+  isbn: string;
 }
 
 const Book: FC = () => {
@@ -28,6 +29,7 @@ const Book: FC = () => {
     description: '読んでわかるコードの重要性と方法について解説',
     image:
       'http://books.google.com/books/content?id=Wx1dLwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+    isbn: '9784798049991'
   };
 
   return (

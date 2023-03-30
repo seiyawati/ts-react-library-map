@@ -5,6 +5,7 @@ export type Book = {
   title: string;
   image: string;
   description: string;
+  isbn: string;
 };
 
 type BookContext = Book | null;
@@ -21,8 +22,6 @@ export const SetBookContext = createContext<SetBookContext>(() => {});
 
 const BookProvider: FC<Props> = ({ children }) => {
   const [book, setBook] = useState<Book | null>(null);
-
-  console.log(book)
 
   return (
     <BookContext.Provider value={book}>
